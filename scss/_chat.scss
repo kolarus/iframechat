@@ -1,0 +1,79 @@
+.chat {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+
+  &__header {
+    height: $header-size;
+    width: 100%;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px ;
+  }
+
+  &__heading {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &__plus {
+    height: 70px;
+    width: 70px;
+    @include main-gradient;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  &__plus-svg {
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+    cursor: pointer;
+    transition: 0.3s all;
+    &:hover {
+      fill: #333;
+    }
+  }
+
+  &__container {
+    background-color: $chat-bg-color;
+    height: calc(100vh - #{$header-size});
+    overflow: hidden;
+  }
+  &__iframe {
+    height: $chat-frame-height;
+    width: $chat-frame-width;
+    border-top: 25px solid white;
+    cursor: move;
+  }
+
+  &__add-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &__name-input {
+    margin: 20px;
+  }
+
+  &__err-box {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    font-size: 14px;
+    right: 20px;
+    bottom: 20px;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    background-color: $err-box-color;
+    color: #fff;
+    border-radius: 20px;
+  }
+}
